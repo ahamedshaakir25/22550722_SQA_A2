@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyTest" thread-count="5">
+
+    <listeners>
+        <listener class-name="utilities.extentReportManager"></listener>
+    </listeners>
+
+ <test name="chrometest">
+        <parameter name="os" value="Windows"></parameter>
+        <parameter name="browser" value="Chrome"></parameter>
+        <classes>
+            <class name="testCases.Test01_ProductListing"/>
+            <class name="testCases.Test02_search"></class>
+            <class name="testCases.Test03_AddtoCart"></class>
+            <class name="testCases.Test04_viewCart"></class>
+        </classes>
+    </test>
+
+
+  <test name="edgetest">
+        <parameter name="os" value="Windows"></parameter>
+        <parameter name="browser" value="Edge"></parameter>
+        <classes>
+            <class name="testCases.Test01_ProductListing"/>
+            <class name="testCases.Test02_search"></class>
+            <class name="testCases.Test03_AddtoCart"></class>
+            <class name="testCases.Test04_viewCart"></class>
+        </classes>
+    </test>
+
+
+</suite>
+
