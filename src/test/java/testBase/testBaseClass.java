@@ -70,7 +70,7 @@ public class testBaseClass {
 
     @BeforeClass
     @Parameters({"os", "browser"})
-    public void setup(String os, String br) {
+    public void setup(@Optional("Windows") String os, @Optional("chrome") String br){//setup(String os, String br) {
 
         logger = LogManager.getLogger(this.getClass());
 
